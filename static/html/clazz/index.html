@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>班级管理</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+<body class="page-body">
+<div class="container-fluid p-3">
+    <div class="page-title"><h5>班级管理</h5></div>
+
+    <!-- 搜索区 -->
+    <div class="card mb-3">
+        <div class="card-body py-2">
+            <form id="searchForm" class="row g-2 align-items-center">
+                <div class="col-auto">
+                    <input type="text" class="form-control form-control-sm" id="keyword" placeholder="请输入班级名称" style="width:200px">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary btn-sm">搜索</button>
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-outline-secondary btn-sm" id="btnReset">重置</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 表格区 -->
+    <div class="card">
+        <div class="card-header bg-white py-2 d-flex justify-content-between align-items-center">
+            <button class="btn btn-primary btn-sm" id="btnAdd">新增</button>
+            <button class="btn btn-outline-secondary btn-sm" onclick="goHome()">返回首页</button>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover mb-0 align-middle">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>班级名称</th>
+                    <th>班级编号</th>
+                    <th>班主任教师ID</th>
+                    <th>班级地址</th>
+                    <th>创建时间</th>
+                    <th style="width:130px">操作</th>
+                </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+        <div class="card-footer bg-white py-2 d-flex justify-content-between align-items-center">
+            <span id="totalInfo" class="text-muted small">共 0 条</span>
+            <ul class="pagination pagination-sm mb-0" id="pagination"></ul>
+        </div>
+    </div>
+</div>
+
+<!-- 新增/修改弹窗 -->
+<div class="modal fade" id="editModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header py-2">
+                <h6 class="modal-title" id="editTitle">新增班级</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="editForm">
+                <div class="modal-body">
+                    <input type="hidden" name="cid">
+                    <div class="mb-3">
+                        <label class="form-label">班级名称 <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control form-control-sm" name="name" maxlength="50" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">班级编号 <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control form-control-sm" name="code" maxlength="50" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">班主任教师 <span class="text-danger">*</span></label>
+                        <select class="form-select form-select-sm js-dd" name="teacher_id" id="teacherSelect" required>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">班级地址</label>
+                        <input type="text" class="form-control form-control-sm" name="address" maxlength="100" placeholder="选填">
+                    </div>
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary btn-sm">确定</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/bootstrap.bundle.min.js"></script>
+<script src="/static/js/common.js"></script>
+<script src="/static/js/clazz.js"></script>
+</body>
+</html>

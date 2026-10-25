@@ -1,0 +1,218 @@
+/**
+ * 若依经典风格定制
+ */
+html, body { height: 100%; }
+
+body.admin-body {
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f0f2f5;
+}
+
+/* ============== 侧边栏 ============== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 240px;
+    background: #304156;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.sidebar-logo {
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    color: #fff;
+    background: #2b3648;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.sidebar-menu { list-style: none; margin: 0; padding: 8px 0; }
+
+.sidebar-menu a {
+    display: block;
+    padding: 13px 24px;
+    color: #bfcbd9;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar-menu a:hover { background: #263445; color: #409eff; }
+
+.sidebar-menu a.active {
+    background: #263445;
+    color: #409eff;
+    border-left: 3px solid #409eff;
+    padding-left: 21px;
+}
+
+/* 侧边栏分组折叠菜单 */
+.menu-group-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-group-title .menu-arrow {
+    font-size: 12px;
+    transition: transform .2s ease;
+}
+
+/* 展开时箭头旋转 90° 指向下方 */
+.menu-group.open .menu-group-title .menu-arrow { transform: rotate(90deg); }
+
+.submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 6px;
+    background: #263445;
+}
+
+.submenu a {
+    position: relative;
+    padding: 10px 24px 10px 46px;
+    font-size: 14px;
+}
+
+/* 子菜单项前的小圆点，颜色随文字色 */
+.submenu a::before {
+    content: "";
+    position: absolute;
+    left: 32px;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: .55;
+    transform: translateY(-50%);
+}
+
+/* 选中态：覆盖父级 active 的 padding-left，补回 3px 边框占位 */
+.submenu li a.active { padding-left: 43px; }
+
+/* ============== 顶部导航 ============== */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 240px;
+    right: 0;
+    height: 50px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 99;
+}
+
+.breadcrumb-text { font-size: 14px; color: #606266; }
+.topbar .user { font-size: 14px; color: #606266; }
+
+/* ============== 内容区 ============== */
+.content { margin-left: 240px; padding: 66px 16px 16px; }
+
+.content-frame {
+    width: 100%;
+    height: calc(100vh - 82px);
+    border: none;
+    background: #fff;
+}
+
+.welcome-panel .card { border: none; }
+.module-card { transition: all .2s; border: 1px solid #e4e7ed !important; }
+.module-card:hover { border-color: #409eff !important; box-shadow: 0 2px 12px rgba(64, 158, 255, .2); }
+
+/* ============== iframe 内模块页面 ============== */
+body.page-body {
+    background: #f0f2f5;
+    font-size: 14px;
+}
+
+.page-title h5 { margin: 0 0 12px; font-size: 18px; color: #303133; }
+
+.table th { font-weight: 600; color: #606266; white-space: nowrap; background: #f5f7fa; }
+.table td { color: #606266; }
+
+.btn-link { text-decoration: none; }
+.card { border: none; box-shadow: 0 1px 2px rgba(0, 0, 0, .05); }
+
+/* ============== 自定义下拉（打开渐进动效） ============== */
+.sel-dd { position: relative; }
+
+.sel-dd-btn {
+    cursor: pointer;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sel-dd-menu {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    z-index: 1050;
+    background: #fff;
+    border: 1px solid #e4e7ed;
+    border-radius: .25rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .12);
+    max-height: 200px;
+    overflow-y: auto;
+    /* 打开动效：透明度 + 上滑渐进过渡 */
+    opacity: 0;
+    transform: translateY(-6px);
+    visibility: hidden;
+    transition: opacity .18s ease, transform .18s ease, visibility .18s;
+}
+
+.sel-dd-menu.open {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.sel-dd-menu li {
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #606266;
+    cursor: pointer;
+}
+
+.sel-dd-menu li:hover { background: #f5f7fa; color: #409eff; }
+.sel-dd-menu li.selected { background: #ecf5ff; color: #409eff; }
+
+/* ============== 首页数据看板 ============== */
+/* 统计卡片：彩色图标底 + 彩色数字，点击跳转对应模块 */
+.stat-card { cursor: pointer; transition: transform .15s ease, box-shadow .15s ease; }
+.stat-card:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0, 0, 0, .08); }
+
+.stat-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    flex-shrink: 0;
+}
+
+.stat-num { font-size: 26px; font-weight: 700; line-height: 1.1; }
+.stat-label { font-size: 13px; color: #909399; margin-top: 2px; }
+
+.stat-blue .stat-icon { background: #e8f3ff; }
+.stat-blue .stat-num { color: #409eff; }
+.stat-green .stat-icon { background: #e7f9ee; }
+.stat-green .stat-num { color: #67c23a; }
+.stat-orange .stat-icon { background: #fff3e5; }
+.stat-orange .stat-num { color: #e6a23c; }
+.stat-purple .stat-icon { background: #f3ecfe; }
+.stat-purple .stat-num { color: #9b6dff; }

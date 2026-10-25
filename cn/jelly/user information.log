@@ -1,0 +1,27 @@
+2026-10-14 22:17:03,180 - AnyIO worker thread - [WARNING] - student.api:student not found, id: 100
+2026-10-14 22:17:10,847 - AnyIO worker thread - [WARNING] - student.api:student id must be greater than 0, got: -1
+2026-10-14 22:17:16,380 - AnyIO worker thread - [INFO] - student.api:get student successfully, id: 1
+2026-10-14 22:21:25,458 - AnyIO worker thread - [INFO] - student.api:show all students successfully
+2026-10-15 14:13:10,459 - AnyIO worker thread - [INFO] - cn.jelly.student.service:Successfully fetched all students, total 7
+2026-10-15 14:13:20,943 - AnyIO worker thread - [INFO] - cn.jelly.student.service:Successfully fetched, student id: 1
+2026-10-15 14:13:32,725 - AnyIO worker thread - [INFO] - cn.jelly.student.service:Successfully fetched, student id: 100
+2026-10-16 14:00:21,756 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched all students, total 7
+2026-10-16 14:08:34,551 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched all students, total 7
+2026-10-16 14:08:53,344 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched all students, total 7
+2026-10-16 14:09:22,264 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched all students, total 7
+2026-10-16 14:09:34,413 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched all students, total 7
+2026-10-16 14:23:48,614 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched all students, total 7
+2026-10-16 14:24:07,298 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched all students, total 7
+2026-10-16 14:27:50,270 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched all students, total 7
+2026-10-16 14:28:39,386 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched all students, total 7
+2026-10-16 14:33:22,430 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched all students, total 7
+2026-10-16 14:33:22,527 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched, student id: 1
+2026-10-16 15:00:39,832 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully inserted, new id: 16
+2026-10-16 15:05:03,906 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully inserted, new id: 17
+2026-10-16 15:05:04,000 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched, student id: 17
+2026-10-16 15:05:29,898 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully inserted, new id: 18
+2026-10-16 15:05:29,968 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched, student id: 18
+2026-10-16 15:16:38,059 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched all students, total 10
+2026-10-16 15:16:49,264 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched all students, total 10
+2026-10-16 15:16:50,933 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched all students, total 10
+2026-10-18 21:01:47,146 - AnyIO worker thread - [INFO] - cn_obj.jelly.teacher.service:successfully updated, teacher id: 7

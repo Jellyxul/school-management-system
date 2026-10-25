@@ -1,0 +1,125 @@
+2026-10-19 23:02:47,632 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched all students, total 18
+2026-10-19 23:10:36,782 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched all students, total 18
+2026-10-19 23:10:59,136 - AnyIO worker thread - [INFO] - cn.jelly.student.service:分页查：第1页 每页2条 关键字=aaa 共9条
+2026-10-19 23:11:10,570 - AnyIO worker thread - [INFO] - cn.jelly.student.service:分页查：第1页 每页5条 关键字=aaa 共9条
+2026-10-20 08:54:38,965 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:successfully fetched all subjects, total 3
+2026-10-20 08:55:02,677 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:分页查：第1页 每页2条 关键字=大学 共2条
+2026-10-20 08:55:10,700 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:successfully fetched, subject id: 1
+2026-10-20 08:56:14,152 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:successfully inserted, new id: 4
+2026-10-20 08:56:34,051 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:successfully updated, subject id: 4
+2026-10-20 08:56:44,771 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:successfully deleted, subject id: 4
+2026-10-20 09:23:59,815 - AnyIO worker thread - [WARNING] - cn.jelly.subject.api:get subject failed: subject not found, id=122
+2026-10-20 10:18:49,195 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched teacher detail with students, id=1
+2026-10-20 11:21:02,530 - AnyIO worker thread - [ERROR] - cn.jelly.subject.api:get subject error: TeacherService.get_teacher_detail() missing 1 required positional argument: 'teacher_id'
+Traceback (most recent call last):
+  File "E:\workspace-python\AILargeModelsDevelopment\Lecture1\cn\jelly\subject\api.py", line 89, in get_subject_detail
+    return ok(service.get_subject_detail(subject_id))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\workspace-python\AILargeModelsDevelopment\Lecture1\cn\jelly\subject\service.py", line 88, in get_subject_detail
+    teacher_detail = TeacherService.get_teacher_detail(teacher_id)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: TeacherService.get_teacher_detail() missing 1 required positional argument: 'teacher_id'
+2026-10-20 11:22:31,280 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched teacher detail with students, id=1
+2026-10-20 11:22:31,281 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:successfully fetched subject detail, id=1, teacher id: 1
+2026-10-20 11:22:54,373 - AnyIO worker thread - [WARNING] - cn.jelly.subject.api:get subject failed: subject not found, id=100
+2026-10-20 11:34:19,898 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched teacher detail with students, id=1
+2026-10-20 11:34:19,899 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:successfully fetched subject detail, id=1, teacher id: 1
+2026-10-21 09:07:21,467 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched students by remote interface, teacher id: 1
+2026-10-21 09:07:21,467 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched, teacher id: 1, student count: 15
+2026-10-21 09:07:53,586 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched students by remote interface, teacher id: 1
+2026-10-21 09:07:53,587 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched, teacher id: 1, student count: 15
+2026-10-21 14:08:49,473 - AnyIO worker thread - [INFO] - cn.jelly.student.service:分页查：第1页 每页10条 关键字= 共17条
+2026-10-21 14:08:50,502 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched all teachers, total 6
+2026-10-21 14:08:51,380 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:分页查：第1页 每页10条 关键字= 共3条
+2026-10-21 14:22:19,636 - AnyIO worker thread - [INFO] - cn.jelly.student.service:分页查：第1页 每页10条 关键字= 共17条
+2026-10-21 14:22:24,584 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched all teachers, total 6
+2026-10-21 14:22:25,953 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:分页查：第1页 每页10条 关键字= 共3条
+2026-10-21 14:22:28,099 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched all teachers, total 6
+2026-10-21 14:22:28,539 - AnyIO worker thread - [INFO] - cn.jelly.student.service:分页查：第1页 每页10条 关键字= 共17条
+2026-10-21 14:22:29,193 - AnyIO worker thread - [INFO] - cn.jelly.student.service:分页查：第1页 每页10条 关键字= 共17条
+2026-10-21 14:22:29,938 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched all teachers, total 6
+2026-10-21 14:22:31,053 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched teacher detail with students, id=1
+2026-10-21 14:23:41,067 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched all teachers, total 6
+2026-10-21 14:23:42,575 - AnyIO worker thread - [INFO] - cn.jelly.student.service:分页查：第1页 每页10条 关键字= 共17条
+2026-10-21 14:34:38,183 - AnyIO worker thread - [INFO] - cn.jelly.clazz.service:分页查：第1页 每页10条 关键字= 共6条
+2026-10-21 14:34:42,789 - AnyIO worker thread - [INFO] - cn.jelly.student.service:分页查：第1页 每页10条 关键字= 共17条
+2026-10-21 14:34:47,369 - AnyIO worker thread - [INFO] - cn.jelly.student.service:分页查：第2页 每页10条 关键字= 共17条
+2026-10-21 14:34:48,833 - AnyIO worker thread - [INFO] - cn.jelly.student.service:分页查：第1页 每页10条 关键字= 共17条
+2026-10-21 14:34:55,373 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched all teachers, total 6
+2026-10-21 14:34:57,478 - AnyIO worker thread - [INFO] - cn.jelly.student.service:分页查：第1页 每页10条 关键字= 共17条
+2026-10-21 14:35:03,861 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched all teachers, total 6
+2026-10-21 14:35:05,551 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:分页查：第1页 每页10条 关键字= 共3条
+2026-10-21 14:35:09,362 - AnyIO worker thread - [INFO] - cn.jelly.clazz.service:分页查：第1页 每页10条 关键字= 共6条
+2026-10-21 14:53:30,566 - AnyIO worker thread - [INFO] - cn.jelly.student.service:分页查：第1页 每页10条 关键字= 共17条
+2026-10-21 14:53:30,927 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched all teachers, total 6
+2026-10-21 14:53:31,231 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:分页查：第1页 每页10条 关键字= 共3条
+2026-10-21 14:53:32,381 - AnyIO worker thread - [INFO] - cn.jelly.clazz.service:分页查：第1页 每页10条 关键字= 共6条
+2026-10-21 14:57:44,272 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:分页查：第1页 每页10条 关键字= 共3条
+2026-10-21 15:09:52,030 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:分页查：第1页 每页10条 关键字= 共5条
+2026-10-21 15:09:55,949 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched all teachers, total 6
+2026-10-21 15:10:05,468 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched all teachers, total 6
+2026-10-21 15:10:23,525 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:successfully inserted, new id: 6
+2026-10-21 15:10:23,530 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:分页查：第1页 每页10条 关键字= 共6条
+2026-10-21 15:21:38,954 - AnyIO worker thread - [INFO] - cn.jelly.arrangement.service:分页查：第1页 每页10条 关键字= 共5条
+2026-10-21 15:21:46,892 - AnyIO worker thread - [INFO] - cn.jelly.clazz.service:分页查：第1页 每页10条 关键字= 共6条
+2026-10-21 15:21:49,373 - AnyIO worker thread - [INFO] - cn.jelly.arrangement.service:分页查：第1页 每页10条 关键字= 共5条
+2026-10-21 15:45:53,401 - AnyIO worker thread - [INFO] - cn.jelly.enrollment.service:分页查：第1页 每页10条 关键字= 共6条
+2026-10-21 15:45:59,163 - AnyIO worker thread - [INFO] - cn.jelly.enrollment.service:successfully fetched, enrollment id: 1
+2026-10-21 15:46:03,034 - AnyIO worker thread - [INFO] - cn.jelly.enrollment.service:successfully fetched, enrollment id: 3
+2026-10-21 15:46:06,618 - AnyIO worker thread - [INFO] - cn.jelly.enrollment.service:successfully fetched, enrollment id: 4
+2026-10-21 15:46:08,382 - AnyIO worker thread - [INFO] - cn.jelly.enrollment.service:successfully fetched, enrollment id: 4
+2026-10-21 15:46:10,076 - AnyIO worker thread - [INFO] - cn.jelly.enrollment.service:successfully fetched, enrollment id: 1
+2026-10-21 15:46:10,082 - AnyIO worker thread - [INFO] - cn.jelly.student.service:successfully fetched all students, total 17
+2026-10-21 15:46:10,088 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:successfully fetched all subjects, total 6
+2026-10-21 16:11:35,343 - AnyIO worker thread - [INFO] - cn.jelly.arrangement.service:successfully fetched all arrangements, total 5
+2026-10-21 16:11:35,347 - AnyIO worker thread - [INFO] - cn.jelly.dashboard.service:dashboard stats: {'student_count': 17, 'teacher_count': 6, 'subject_count': 6, 'clazz_count': 6}
+2026-10-21 16:11:43,298 - AnyIO worker thread - [INFO] - cn.jelly.student.service:分页查：第1页 每页10条 关键字= 共17条
+2026-10-21 16:11:44,357 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched all teachers, total 6
+2026-10-21 16:11:44,786 - AnyIO worker thread - [INFO] - cn.jelly.arrangement.service:successfully fetched all arrangements, total 5
+2026-10-21 16:11:44,788 - AnyIO worker thread - [INFO] - cn.jelly.dashboard.service:dashboard stats: {'student_count': 17, 'teacher_count': 6, 'subject_count': 6, 'clazz_count': 6}
+2026-10-21 16:11:48,138 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched all teachers, total 6
+2026-10-21 16:11:49,259 - AnyIO worker thread - [INFO] - cn.jelly.arrangement.service:successfully fetched all arrangements, total 5
+2026-10-21 16:11:49,263 - AnyIO worker thread - [INFO] - cn.jelly.dashboard.service:dashboard stats: {'student_count': 17, 'teacher_count': 6, 'subject_count': 6, 'clazz_count': 6}
+2026-10-21 16:11:49,999 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:分页查：第1页 每页10条 关键字= 共6条
+2026-10-21 16:11:51,391 - AnyIO worker thread - [INFO] - cn.jelly.arrangement.service:successfully fetched all arrangements, total 5
+2026-10-21 16:11:51,394 - AnyIO worker thread - [INFO] - cn.jelly.dashboard.service:dashboard stats: {'student_count': 17, 'teacher_count': 6, 'subject_count': 6, 'clazz_count': 6}
+2026-10-21 16:11:53,480 - AnyIO worker thread - [INFO] - cn.jelly.clazz.service:分页查：第1页 每页10条 关键字= 共6条
+2026-10-21 16:11:55,127 - AnyIO worker thread - [INFO] - cn.jelly.arrangement.service:successfully fetched all arrangements, total 5
+2026-10-21 16:11:55,131 - AnyIO worker thread - [INFO] - cn.jelly.dashboard.service:dashboard stats: {'student_count': 17, 'teacher_count': 6, 'subject_count': 6, 'clazz_count': 6}
+2026-10-21 16:12:03,236 - AnyIO worker thread - [INFO] - cn.jelly.enrollment.service:分页查：第1页 每页10条 关键字= 共6条
+2026-10-21 16:13:12,411 - AnyIO worker thread - [INFO] - cn.jelly.arrangement.service:successfully fetched all arrangements, total 5
+2026-10-21 16:13:12,413 - AnyIO worker thread - [INFO] - cn.jelly.dashboard.service:dashboard stats: {'student_count': 17, 'teacher_count': 6, 'subject_count': 6, 'clazz_count': 6}
+2026-10-21 16:13:31,045 - AnyIO worker thread - [INFO] - cn.jelly.arrangement.service:successfully fetched all arrangements, total 5
+2026-10-21 16:13:31,048 - AnyIO worker thread - [INFO] - cn.jelly.dashboard.service:dashboard stats: {'student_count': 17, 'teacher_count': 6, 'subject_count': 6, 'clazz_count': 6}
+2026-10-21 16:20:34,832 - AnyIO worker thread - [INFO] - cn.jelly.arrangement.service:successfully fetched all arrangements, total 5
+2026-10-21 16:20:34,836 - AnyIO worker thread - [INFO] - cn.jelly.dashboard.service:dashboard stats: {'student_count': 17, 'teacher_count': 6, 'subject_count': 6, 'clazz_count': 6}
+2026-10-21 16:20:38,733 - AnyIO worker thread - [INFO] - cn.jelly.student.service:分页查：第1页 每页10条 关键字= 共17条
+2026-10-21 16:20:39,940 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched all teachers, total 6
+2026-10-21 16:20:40,945 - AnyIO worker thread - [INFO] - cn.jelly.clazz.service:分页查：第1页 每页10条 关键字= 共6条
+2026-10-21 16:20:41,384 - AnyIO worker thread - [INFO] - cn.jelly.arrangement.service:successfully fetched all arrangements, total 5
+2026-10-21 16:20:41,389 - AnyIO worker thread - [INFO] - cn.jelly.dashboard.service:dashboard stats: {'student_count': 17, 'teacher_count': 6, 'subject_count': 6, 'clazz_count': 6}
+2026-10-21 16:20:42,452 - AnyIO worker thread - [INFO] - cn.jelly.clazz.service:分页查：第1页 每页10条 关键字= 共6条
+2026-10-21 16:20:43,643 - AnyIO worker thread - [INFO] - cn.jelly.arrangement.service:successfully fetched all arrangements, total 5
+2026-10-21 16:20:43,646 - AnyIO worker thread - [INFO] - cn.jelly.dashboard.service:dashboard stats: {'student_count': 17, 'teacher_count': 6, 'subject_count': 6, 'clazz_count': 6}
+2026-10-21 16:20:51,243 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:分页查：第1页 每页10条 关键字= 共6条
+2026-10-21 16:20:52,573 - AnyIO worker thread - [INFO] - cn.jelly.arrangement.service:successfully fetched all arrangements, total 5
+2026-10-21 16:20:52,576 - AnyIO worker thread - [INFO] - cn.jelly.dashboard.service:dashboard stats: {'student_count': 17, 'teacher_count': 6, 'subject_count': 6, 'clazz_count': 6}
+2026-10-21 16:50:13,591 - AnyIO worker thread - [INFO] - cn.jelly.arrangement.service:successfully fetched all arrangements, total 5
+2026-10-21 16:50:13,595 - AnyIO worker thread - [INFO] - cn.jelly.dashboard.service:dashboard stats: {'student_count': 17, 'teacher_count': 6, 'subject_count': 6, 'clazz_count': 6}
+2026-10-22 09:13:27,573 - AnyIO worker thread - [INFO] - cn.jelly.arrangement.service:successfully fetched all arrangements, total 5
+2026-10-22 09:13:27,580 - AnyIO worker thread - [INFO] - cn.jelly.dashboard.service:dashboard stats: {'student_count': 17, 'teacher_count': 6, 'subject_count': 6, 'clazz_count': 6}
+2026-10-22 09:13:43,844 - AnyIO worker thread - [INFO] - cn.jelly.student.service:分页查：第1页 每页10条 关键字= 共17条
+2026-10-22 09:13:45,433 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched all teachers, total 6
+2026-10-22 09:13:47,330 - AnyIO worker thread - [INFO] - cn.jelly.clazz.service:分页查：第1页 每页10条 关键字= 共6条
+2026-10-22 09:13:47,940 - AnyIO worker thread - [INFO] - cn.jelly.arrangement.service:successfully fetched all arrangements, total 5
+2026-10-22 09:13:47,944 - AnyIO worker thread - [INFO] - cn.jelly.dashboard.service:dashboard stats: {'student_count': 17, 'teacher_count': 6, 'subject_count': 6, 'clazz_count': 6}
+2026-10-22 09:14:28,419 - AnyIO worker thread - [INFO] - cn.jelly.student.service:分页查：第1页 每页10条 关键字= 共17条
+2026-10-22 09:14:31,017 - AnyIO worker thread - [INFO] - cn.jelly.student.service:分页查：第1页 每页10条 关键字= 共17条
+2026-10-22 09:14:31,622 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched all teachers, total 6
+2026-10-22 09:14:32,152 - AnyIO worker thread - [INFO] - cn.jelly.student.service:分页查：第1页 每页10条 关键字= 共17条
+2026-10-22 09:14:34,203 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched all teachers, total 6
+2026-10-22 09:14:47,178 - AnyIO worker thread - [INFO] - cn.jelly.teacher.service:successfully fetched all teachers, total 6
+2026-10-22 09:15:00,709 - AnyIO worker thread - [INFO] - cn.jelly.subject.service:分页查：第1页 每页10条 关键字= 共6条
+2026-10-22 09:15:02,108 - AnyIO worker thread - [INFO] - cn.jelly.arrangement.service:分页查：第1页 每页10条 关键字= 共5条
+2026-10-22 09:18:39,043 - AnyIO worker thread - [INFO] - cn.jelly.arrangement.service:successfully fetched all arrangements, total 5
+2026-10-22 09:18:39,047 - AnyIO worker thread - [INFO] - cn.jelly.dashboard.service:dashboard stats: {'student_count': 17, 'teacher_count': 6, 'subject_count': 6, 'clazz_count': 6}

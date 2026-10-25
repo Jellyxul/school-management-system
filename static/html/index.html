@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>管理系统</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+<body class="admin-body">
+<!-- 左侧菜单 -->
+<aside class="sidebar">
+    <div class="sidebar-logo">管理系统</div>
+    <ul class="sidebar-menu">
+        <li><a href="javascript:;" class="active" data-page="" data-title="首页">🏠 首页</a></li>
+        <!-- 基础信息分组 -->
+        <li class="menu-group open">
+            <a href="javascript:;" class="menu-group-title" data-bs-toggle="collapse" data-bs-target="#menuBasic" aria-expanded="true">
+                🏫 基础信息<span class="menu-arrow">▸</span>
+            </a>
+            <ul class="collapse show submenu" id="menuBasic">
+                <li><a href="javascript:;" data-page="student/index.html" data-title="学生管理">学生管理</a></li>
+                <li><a href="javascript:;" data-page="teacher/index.html" data-title="教师管理">教师管理</a></li>
+                <li><a href="javascript:;" data-page="clazz/index.html" data-title="班级管理">班级管理</a></li>
+            </ul>
+        </li>
+        <!-- 教务管理分组 -->
+        <li class="menu-group open">
+            <a href="javascript:;" class="menu-group-title" data-bs-toggle="collapse" data-bs-target="#menuEdu" aria-expanded="true">
+                📚 教务管理<span class="menu-arrow">▸</span>
+            </a>
+            <ul class="collapse show submenu" id="menuEdu">
+                <li><a href="javascript:;" data-page="subject/index.html" data-title="课程管理">课程管理</a></li>
+                <li><a href="javascript:;" data-page="arrangement/index.html" data-title="排课管理">排课管理</a></li>
+                <li><a href="javascript:;" data-page="enrollment/index.html" data-title="选课成绩">选课成绩</a></li>
+            </ul>
+        </li>
+        <!-- 系统工具分组 -->
+        <li class="menu-group">
+            <a href="javascript:;" class="menu-group-title" data-bs-toggle="collapse" data-bs-target="#menuTool" aria-expanded="false">
+                🛠️ 系统工具<span class="menu-arrow">▸</span>
+            </a>
+            <ul class="collapse submenu" id="menuTool">
+                <li><a href="javascript:;" data-page="notice/index.html" data-title="通知公告">通知公告</a></li>
+            </ul>
+        </li>
+    </ul>
+</aside>
+
+<!-- 顶部导航 -->
+<header class="topbar">
+    <span id="breadcrumb" class="breadcrumb-text">首页</span>
+    <span class="user">Admin</span>
+</header>
+
+<!-- 内容区 -->
+<main class="content">
+    <div id="welcome" class="welcome-panel">
+        <!-- 数据统计卡片：点击可跳转对应模块 -->
+        <div class="row g-3">
+            <div class="col-md-3 col-sm-6">
+                <a href="javascript:;" class="text-decoration-none" data-page="student/index.html" data-title="学生管理">
+                    <div class="card stat-card stat-blue">
+                        <div class="card-body d-flex align-items-center">
+                            <div class="stat-icon">👨‍🎓</div>
+                            <div class="ms-3">
+                                <div class="stat-num" id="statStudent">-</div>
+                                <div class="stat-label">学生总数</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="javascript:;" class="text-decoration-none" data-page="teacher/index.html" data-title="教师管理">
+                    <div class="card stat-card stat-green">
+                        <div class="card-body d-flex align-items-center">
+                            <div class="stat-icon">👨‍🏫</div>
+                            <div class="ms-3">
+                                <div class="stat-num" id="statTeacher">-</div>
+                                <div class="stat-label">教师总数</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="javascript:;" class="text-decoration-none" data-page="subject/index.html" data-title="课程管理">
+                    <div class="card stat-card stat-orange">
+                        <div class="card-body d-flex align-items-center">
+                            <div class="stat-icon">📚</div>
+                            <div class="ms-3">
+                                <div class="stat-num" id="statSubject">-</div>
+                                <div class="stat-label">课程总数</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="javascript:;" class="text-decoration-none" data-page="clazz/index.html" data-title="班级管理">
+                    <div class="card stat-card stat-purple">
+                        <div class="card-body d-flex align-items-center">
+                            <div class="stat-icon">🏫</div>
+                            <div class="ms-3">
+                                <div class="stat-num" id="statClazz">-</div>
+                                <div class="stat-label">班级总数</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="row g-3 mt-1">
+            <!-- 今日排课（左侧，占 2/3 宽） -->
+            <div class="col-md-8 col-12">
+                <div class="card h-100">
+                    <div class="card-header bg-white py-2 d-flex justify-content-between align-items-center">
+                        <span class="fw-bold">📅 今日排课</span>
+                        <span class="text-muted small" id="todayLabel"></span>
+                    </div>
+                    <ul class="list-group list-group-flush" id="todayList">
+                        <li class="list-group-item text-muted text-center py-4">加载中...</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 最新公告（右侧，前端静态数据，与通知公告页共用） -->
+            <div class="col-md-4 col-12">
+                <div class="card h-100">
+                    <div class="card-header bg-white py-2 d-flex justify-content-between align-items-center">
+                        <span class="fw-bold">📢 最新公告</span>
+                        <a href="javascript:;" class="small text-decoration-none" data-page="notice/index.html" data-title="通知公告">查看全部 »</a>
+                    </div>
+                    <ul class="list-group list-group-flush" id="latestNoticeList"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <iframe id="contentFrame" class="content-frame" style="display:none"></iframe>
+</main>
+
+<script src="/static/js/bootstrap.bundle.min.js"></script>
+<script src="/static/js/common.js"></script>
+<script src="/static/js/index.js"></script>
+</body>
+</html>
